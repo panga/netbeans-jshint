@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE type PUBLIC "-//NetBeans//DTD annotation type 1.0//EN" "http://www.netbeans.org/dtds/annotation-type-1_0.dtd">
+<type name="jshint-annotation"
+      description_key="JSHintErrorLabel"
+      localizing_bundle="netbeans.jshint.Bundle"
+      visible="true"
+      glyph="nbresloc:/netbeans/jshint/icon.png"
+      priority="50"
+      type="linepart"
+      browseable="true"
+      severity="warning"
+      waveunderline="#E1AA00"
+      custom_sidebar_color="0xe1aa00" />
