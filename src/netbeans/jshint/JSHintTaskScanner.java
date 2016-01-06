@@ -33,7 +33,7 @@ public class JSHintTaskScanner extends FileTaskScanner {
 
     @Override
     public List<? extends Task> scan(FileObject fo) {
-        if (fo.isFolder() || !fo.getExt().equalsIgnoreCase("js")) {
+        if (fo.isFolder() || !fo.getMIMEType().equals("text/javascript")) {
             return Collections.<Task>emptyList();
         }
 

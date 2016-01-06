@@ -23,7 +23,7 @@ import org.netbeans.api.queries.FileEncodingQuery;
 public class JSHint {
 
     private static final String JSHINT_FILE = "jshint-2.7.0.js";
-    private static final JSHint _instance = new JSHint();
+    private static final JSHint INSTANCE = new JSHint();
 
     private Scriptable scope;
     private Function jshint;
@@ -117,6 +117,6 @@ public class JSHint {
     }
 
     public static LinkedList<JSHintError> lint(FileObject fo) {
-        return _instance.lintFile(fo);
+        return INSTANCE.lintFile(fo);
     }
 }
