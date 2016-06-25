@@ -7,6 +7,8 @@ JSHint integration for NetBeans
 
 This project integrates JSHint into the NetBeans.
 
-It automatically validates files ending with "js" and adds warning markers and action items for every problem found by JSHint using ".jshintrc" configuration files from parent directories or the default JSHint configuration in case of no configuration file is found.
+It automatically validates files ending with "js" and adds warning markers and action items for every problem found by JSHint using ".jshintrc" configuration files from project directories.
 
-JSHint 2.7.0 included.
+JSHint 2.9.2 included.
+
+This plugin is available out-of-the box as a verified NetBeans plugin or in the [NetBeans Plugin Portal](http://plugins.netbeans.org/plugin/58580/jshint).

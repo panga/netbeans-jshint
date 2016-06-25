@@ -52,7 +52,7 @@ public class JSHintTaskScanner extends FileTaskScanner {
 
         final LinkedList<Task> tasks = new LinkedList<Task>();
 
-        final LinkedList<JSHintError> errors = JSHint.lint(fo);
+        final LinkedList<JSHintError> errors = JSHint.lint(fo, JSHintUtil.getJsonConfig(fo));
 
         for (JSHintError error : errors) {
             if (dataObject != null && lineCookie != null) {

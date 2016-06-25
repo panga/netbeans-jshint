@@ -9,17 +9,32 @@ import org.openide.filesystems.FileObject;
 import org.openide.filesystems.FileSystem;
 import org.openide.filesystems.FileUtil;
 
+/**
+ * @author Leonardo Zanivan <leonardo.zanivan@gmail.com>
+ */
 public class JSHintTest {
 
     @Test
-    public void testLint() throws IOException {
+    public void testLintWithNullConfig() throws IOException {
         FileSystem fs = FileUtil.createMemoryFileSystem();
         FileObject fo = fs.getRoot().createData("test.js");
         PrintWriter out = (new PrintWriter(fo.getOutputStream()));
         out.write("x;");
         out.close();
 
-        LinkedList<JSHintError> errors = JSHint.lint(fo);
+        LinkedList<JSHintError> errors = JSHint.lint(fo, null);
+        Assert.assertEquals(0, errors.size());
+    }
+
+    @Test
+    public void testLintWithDefaultConfig() throws IOException {
+        FileSystem fs = FileUtil.createMemoryFileSystem();
+        FileObject fo = fs.getRoot().createData("test.js");
+        PrintWriter out = (new PrintWriter(fo.getOutputStream()));
+        out.write("x;");
+        out.close();
+
+        LinkedList<JSHintError> errors = JSHint.lint(fo, "{}");
         JSHintError head = errors.element();
 
         Assert.assertEquals(1, errors.size());
@@ -28,18 +43,7 @@ public class JSHintTest {
     }
 
     @Test
-    public void testFindFile() throws IOException {
-        FileSystem fs = FileUtil.createMemoryFileSystem();
-        FileObject hasFile = fs.getRoot().createFolder("hasFile");
-        FileObject file = hasFile.createData("file");
-        FileObject childFolder = hasFile.createFolder("childFolder");
-
-        FileObject result = JSHint.findFile("file", childFolder);
-        Assert.assertEquals(file, result);
-    }
-
-    @Test
-    public void testLintWithConfig() throws IOException {
+    public void testLintWithFileConfig() throws IOException {
         FileSystem fs = FileUtil.createMemoryFileSystem();
 
         FileObject jsFo = fs.getRoot().createData("test.js");
@@ -52,7 +56,9 @@ public class JSHintTest {
         configOut.write("{\"curly\":true,\"undef\":true,\"globals\": {\"bar\": false}}");
         configOut.close();
 
-        LinkedList<JSHintError> errors = JSHint.lint(jsFo);
+        final String jsonConfig = JSHintUtil.getJsonConfig(configFo);
+
+        LinkedList<JSHintError> errors = JSHint.lint(jsFo, jsonConfig);
 
         Assert.assertEquals(2, errors.size());
         JSHintError error = errors.pop();

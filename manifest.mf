@@ -3,5 +3,5 @@ AutoUpdate-Show-In-Client: true
 OpenIDE-Module: netbeans.jshint
 OpenIDE-Module-Layer: netbeans/jshint/layer.xml
 OpenIDE-Module-Localizing-Bundle: netbeans/jshint/Bundle.properties
-OpenIDE-Module-Specification-Version: 1.1
+OpenIDE-Module-Specification-Version: 1.2
 
