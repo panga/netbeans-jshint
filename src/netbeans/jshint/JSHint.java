@@ -20,7 +20,7 @@ import org.mozilla.javascript.json.JsonParser;
  */
 public final class JSHint {
 
-    private static final String JSHINT_FILE = "jshint-2.9.2.js";
+    private static final String JSHINT_FILE = "jshint-2.9.4.js";
     private static final JSHint INSTANCE = new JSHint();
 
     private Scriptable scope;
