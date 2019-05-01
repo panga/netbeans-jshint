@@ -16,11 +16,11 @@ import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.json.JsonParser;
 
 /**
- * @author Leonardo Zanivan <leonardo.zanivan@gmail.com>
+ * @author Leonardo Zanivan <panga@apache.org>
  */
 public final class JSHint {
 
-    private static final String JSHINT_FILE = "jshint-2.9.4.js";
+    private static final String JSHINT_FILE = "jshint-2.10.1.js";
     private static final JSHint INSTANCE = new JSHint();
 
     private Scriptable scope;

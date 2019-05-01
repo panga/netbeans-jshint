@@ -3,7 +3,7 @@ package netbeans.jshint;
 import org.mozilla.javascript.NativeObject;
 
 /**
- * @author Leonardo Zanivan <leonardo.zanivan@gmail.com>
+ * @author Leonardo Zanivan <panga@apache.org>
  */
 public class JSHintError {
 

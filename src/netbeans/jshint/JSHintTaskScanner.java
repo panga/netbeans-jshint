@@ -13,7 +13,7 @@ import org.openide.util.Exceptions;
 import org.openide.util.NbBundle;
 
 /**
- * @author Leonardo Zanivan <leonardo.zanivan@gmail.com>
+ * @author Leonardo Zanivan <panga@apache.org>
  */
 public class JSHintTaskScanner extends FileTaskScanner {
 

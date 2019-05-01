@@ -13,7 +13,7 @@ import org.openide.text.Annotation;
 import org.openide.text.Line;
 
 /**
- * @author Leonardo Zanivan <leonardo.zanivan@gmail.com>
+ * @author Leonardo Zanivan <panga@apache.org>
  */
 public class JSHintErrorAnnotation extends Annotation {
 

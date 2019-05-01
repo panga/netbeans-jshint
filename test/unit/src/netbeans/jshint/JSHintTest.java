@@ -10,7 +10,7 @@ import org.openide.filesystems.FileSystem;
 import org.openide.filesystems.FileUtil;
 
 /**
- * @author Leonardo Zanivan <leonardo.zanivan@gmail.com>
+ * @author Leonardo Zanivan <panga@apache.org>
  */
 public class JSHintTest {
 

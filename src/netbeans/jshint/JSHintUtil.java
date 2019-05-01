@@ -7,7 +7,7 @@ import org.netbeans.api.queries.FileEncodingQuery;
 import org.openide.util.Exceptions;
 
 /**
- * @author Leonardo Zanivan <leonardo.zanivan@gmail.com>
+ * @author Leonardo Zanivan <panga@apache.org>
  */
 public final class JSHintUtil {
 
